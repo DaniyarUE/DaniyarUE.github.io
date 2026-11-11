@@ -80,7 +80,7 @@ a{color:inherit}
 .hero-shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(30,70,120,.28) 0%,rgba(30,70,120,0) 30%,rgba(0,0,0,0) 55%,rgba(10,30,10,.35) 100%)}
 .hero-mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;z-index:2;padding:40px 0 120px}
 .kicker{font-size:12px;font-weight:700;letter-spacing:.32em;color:rgba(255,255,255,.88);margin:0 0 18px}
-h1.big{margin:0;color:#fff;font-weight:900;letter-spacing:-.055em;line-height:.84;font-size:clamp(56px,12.5vw,210px);
+h1.big{margin:0;color:#fff;font-weight:900;letter-spacing:-.055em;line-height:.84;font-size:clamp(40px,11.2vw,196px);
   filter:drop-shadow(0 10px 30px rgba(20,50,90,.22))}
 h1.big em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em}
 h1.big .line{display:block;overflow:hidden;padding:0 .06em .04em}
@@ -111,13 +111,15 @@ h1.big .line:nth-child(2) span{animation-delay:.12s}
 /* ───────── STATS ───────── */
 .wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:40px 0 30px}
-.stat{padding:22px 22px 20px;border-radius:var(--radius);background:rgba(255,255,255,.2);border:1px solid var(--glass-line);
-  backdrop-filter:blur(14px);color:#fff}
+.stat{padding:22px 22px 20px;border-radius:var(--radius);background:rgba(22,32,46,.62);border:1px solid rgba(255,255,255,.16);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#fff;box-shadow:0 20px 40px -24px rgba(10,20,40,.6)}
+.stat .usd{display:block;font-size:.4em;letter-spacing:-.01em;font-weight:700;opacity:.75;margin-top:6px}
 .stat b{display:block;font-size:clamp(38px,4.6vw,62px);font-weight:900;letter-spacing:-.05em;line-height:.95}
 .stat small{display:block;margin-top:10px;font-size:13px;font-weight:600;line-height:1.35;opacity:.92}
 
 /* ───────── LEGEND ───────── */
-.legend{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;padding:14px 0 50px;color:#fff;font-size:13px;font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:14px auto 50px;width:fit-content;max-width:100%;
+  padding:10px 16px;border-radius:999px;background:rgba(22,32,46,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#fff;font-size:13px;font-weight:600}
 .tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
   padding:6px 11px 6px 9px;border-radius:999px;white-space:nowrap}
 .tag::before{content:"";width:9px;height:9px;border-radius:50%}
@@ -160,6 +162,22 @@ h1.big .line:nth-child(2) span{animation-delay:.12s}
   border:2px dashed rgba(13,20,28,.18);border-radius:16px;color:var(--ink-3);font-size:13px;font-weight:600;line-height:1.4}
 .proof .empty code{display:block;margin-top:6px;font-size:11px;color:var(--ink-3);font-weight:500}
 figure.ok .empty{display:none}
+.work-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.wl{display:flex;flex-direction:column;justify-content:space-between;gap:22px;min-height:150px;padding:20px;border-radius:18px;text-decoration:none;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.wl:hover{transform:translateY(-4px);box-shadow:0 18px 30px -18px rgba(10,20,40,.5)}
+.wl small{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.wl b{display:block;font-size:22px;font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-top:6px}
+.wl span{font-size:13px;font-weight:600;opacity:.85}
+.wl .arrow{font-size:22px;font-weight:900;opacity:1}
+.wl-row{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.wl.studio{background:var(--lime);color:var(--ink)}
+.wl.film{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.wl.film::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;
+  background:radial-gradient(circle,rgba(229,255,88,.35),rgba(229,255,88,0) 70%)}
+.play{width:38px;height:38px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font-size:13px}
+@media (max-width:700px){.work-links{grid-template-columns:1fr}}
+
 .case-body>*,.small-cases>*,.proof>*{min-width:0}
 .proof figure.cat{max-height:520px}
 .proof figure.cat img{object-position:top}
@@ -201,7 +219,7 @@ figure.ok .empty{display:none}
 .how{padding:90px 0 30px;color:#fff}
 .how h4,.contact h4{font-size:12px;font-weight:800;letter-spacing:.24em;margin:0 0 20px;opacity:.9}
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.how-card{padding:26px;border-radius:var(--radius);background:rgba(255,255,255,.18);border:1px solid var(--glass-line);backdrop-filter:blur(14px)}
+.how-card{padding:26px;border-radius:var(--radius);background:rgba(22,32,46,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 .how-card b{display:block;font-size:24px;font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:10px}
 .how-card p{margin:0;font-size:15px;line-height:1.5;opacity:.95}
 .tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
@@ -321,11 +339,11 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
 
   <div class="hero-mid">
     <p class="kicker">GROWTH · DISTRIBUTION · SALES</p>
-    <h1 class="big"><span class="line"><span>GET IT SEEN.</span></span><span class="line"><span>GET IT <em>sold.</em></span></span></h1>
+    <h1 class="big"><span class="line"><span>DISTRIBUTION</span></span><span class="line"><span>IS THE <em>product.</em></span></span></h1>
   </div>
 
   <div class="hero-bottom">
-    <p class="lede">Zero to 207,000 subscribers in 28 days. AED 1M in personal sales in a month. An AI sales agent shipped in 2 days.</p>
+    <p class="lede">Zero to 207,000 subscribers in 28 days. AED 1M (≈ $272K) in personal sales in a month. An AI sales agent shipped in 2 days.</p>
     <nav class="dock" aria-label="Contact">
       <a class="i-mail" href="mailto:saidalievdaniyar10c@gmail.com"><span>Email</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></a>
       <a class="i-tg" href="https://t.me/ppresentt" target="_blank" rel="noopener"><span>Telegram</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 4.2 2.9 11.3c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.8-1.4-1.4ZM8.9 14l9-5.7c.4-.3.8-.1.5.2l-7.7 7-.3 3.2L8.9 14Z"/></svg></a>
@@ -343,7 +361,7 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
     <section class="stats rv" aria-label="Headline numbers">
       <div class="stat"><b><span data-count="207">207</span>K</b><small>YouTube subscribers in 28 days, from zero, solo. 280K by the time I sold it</small></div>
       <div class="stat"><b><span data-count="22">22</span>M</b><small>views on the same channel in the same 28 days</small></div>
-      <div class="stat"><b>AED <span data-count="1">1</span>M</b><small>personal sales in my strongest month</small></div>
+      <div class="stat"><b>AED <span data-count="1">1</span>M<span class="usd">≈ $272K</span></b><small>personal sales in my strongest month</small></div>
       <div class="stat"><b><span data-count="2">2</span> days</b><small>to ship a working AI sales agent, later sold to 3 companies</small></div>
     </section>
 
@@ -440,6 +458,16 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
           <p>The work: product visuals for e-commerce, commercial videos that then ran as paid ads, talking-head UGC and hypermotion product spots.</p>
           <p>The order I'm proudest of: <strong>800 product images in exactly 24 hours</strong>, from brief to delivery, done with one collaborator. A full catalogue rebuilt as studio-grade photography. Those images replaced paid photography on the site and ran in live Meta ads that sold.</p>
           <p class="claim-tag"><span class="tag t-told">In my words: the clients and revenue</span></p>
+          <div class="work-links">
+            <a class="wl studio" href="https://kadrstudio.netlify.app/" target="_blank" rel="noopener">
+              <div><small>Studio portfolio</small><b>KADR.AI — commercials, UGC, product visuals</b></div>
+              <div class="wl-row"><span>kadrstudio.netlify.app</span><span class="arrow">↗</span></div>
+            </a>
+            <a class="wl film" href="https://www.instagram.com/p/Da76n61MsOH/" target="_blank" rel="noopener">
+              <div><small>AI short film · Instagram</small><b>A football story, made with AI</b></div>
+              <div class="wl-row"><span>500K views in the first 4 days</span><span class="play">▶</span></div>
+            </a>
+          </div>
         </div>
         <div class="proof">
           <figure class="wide cat" data-slot><img src="assets/catalogue.jpg" alt="Caviar Boutique online catalogue with AI-generated product photography"><div class="empty">Catalogue</div><figcaption><span class="tag t-proof">Receipt · live on the store</span></figcaption></figure>
@@ -461,7 +489,7 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
         </div>
         <div class="case-body" style="grid-template-columns:1fr;margin-top:24px">
           <div>
-            <p>My strongest month: <strong>AED 1,000,000 in personal sales</strong> across hotels, restaurants and private VVIP clients in Dubai and Abu Dhabi. We worked to a shared team KPI on top of personal commission.</p>
+            <p>My strongest month: <strong>AED 1,000,000 (≈ $272K) in personal sales</strong> across hotels, restaurants and private VVIP clients in Dubai and Abu Dhabi. We worked to a shared team KPI on top of personal commission.</p>
             <p>I won the big accounts the slow way: <strong>drove to each venue and ran tastings</strong> for executive chefs and F&amp;B decision-makers.</p>
             <div class="chips"><span>Mandarin Oriental</span><span>Bvlgari Yacht Club</span><span>Madinat Jumeirah</span><span>Billionaire</span><span>Krasota</span><span>Plumpy</span></div>
             <p>Also built the supply chain myself — direct from EU suppliers and a packaging manufacturer in China — and ran a 15-person team.</p>
