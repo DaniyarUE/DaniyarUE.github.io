@@ -162,6 +162,11 @@ h1.big .line:nth-child(2) span{animation-delay:.12s}
   border:2px dashed rgba(13,20,28,.18);border-radius:16px;color:var(--ink-3);font-size:13px;font-weight:600;line-height:1.4}
 .proof .empty code{display:block;margin-top:6px;font-size:11px;color:var(--ink-3);font-weight:500}
 figure.ok .empty{display:none}
+.studio-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.studio-links .studio-link{margin-top:0}
+.studio-link.lime-btn{background:var(--lime);color:var(--ink)}
+.nav a.nav-hl{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+
 .ventures{color:#fff;margin:0 0 30px}
 .ventures h4{font-size:12px;font-weight:800;letter-spacing:.24em;margin:0 0 14px}
 .v-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -362,7 +367,7 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
       </div>
     </div>
     <nav class="nav">
-      <a href="#work">Work</a><a href="#how">What I do</a><a href="#contact">Contact</a>
+      <a href="#work">Work</a><a href="#how">What I do</a><a href="work.html" class="nav-hl">Content work →</a><a href="#contact">Contact</a>
     </nav>
   </div>
 
@@ -404,7 +409,7 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
     <section class="ventures rv" aria-label="Things I started">
       <h4>THINGS I STARTED</h4>
       <div class="v-grid">
-        <a class="v-card" href="#kadr"><span class="v-status run">Running</span><b>KADR.AI</b><p>AI content studio. Commercials, UGC, product visuals for brands.</p><small>Founder · 2026 – now</small></a>
+        <a class="v-card" href="work.html"><span class="v-status run">Running</span><b>KADR.AI</b><p>AI content studio. Commercials, UGC, product visuals for brands. See the work →</p><small>Founder · 2026 – now</small></a>
         <a class="v-card" href="#muras"><span class="v-status shut">Shut down</span><b>Muras</b><p>AI sales agent on top of a company's CRM. Built in 2 days, sold to 3 companies.</p><small>Founder · solo · 2026</small></a>
         <a class="v-card" href="#youtube"><span class="v-status sold">Sold</span><b>YouTube gaming channel</b><p>Real gameplay, no AI footage. 0 → 207K in 28 days, 280K when sold.</p><small>Creator · solo · 2026</small></a>
       </div>
@@ -482,7 +487,7 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
           <div class="ch">CH 03 · FOUNDER</div>
           <h3><span class="founder-pill">Founder</span> KADR.AI</h3>
           <p class="role">My AI content studio in Dubai. Commercials, UGC, hypermotion and product visuals for brands. I started it, I sell it, I deliver it.</p>
-          <a class="studio-link" href="https://kadrstudio.netlify.app/" target="_blank" rel="noopener">See the studio ↗</a>
+          <div class="studio-links"><a class="studio-link lime-btn" href="work.html">See the content work →</a><a class="studio-link" href="https://kadrstudio.netlify.app/" target="_blank" rel="noopener">Studio site ↗</a></div>
         </div>
         <div class="when">2026 – Present</div>
       </div>

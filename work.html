@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Work — Daniyar Saidaliev</title>
+<meta name="description" content="AI commercials, short films, UGC, hypermotion and product visuals, directed end to end by Daniyar Saidaliev, founder of KADR.AI.">
+<meta name="theme-color" content="#4a7cc2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky-top:#2f63ad; --sky-mid:#5f8ecb; --sky-low:#7ea3d4; --haze:#93b4dd;
+  --ink:#0d141c; --ink-2:#3b4652; --ink-3:#6b7581;
+  --paper:#f5f3ec; --paper-2:#ebe8de; --line:rgba(13,20,28,.12);
+  --lime:#e5ff58; --glass:rgba(255,255,255,.16); --glass-line:rgba(255,255,255,.38);
+  --dark-glass:rgba(22,32,46,.62);
+  --sans:"Inter",system-ui,sans-serif; --serif:"Instrument Serif",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--sky-mid);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--lime);color:var(--ink)}
+
+.sky{position:fixed;inset:0;z-index:-2;overflow:hidden;background:linear-gradient(180deg,var(--sky-top) 0%,var(--sky-mid) 42%,var(--sky-low) 72%,var(--haze) 100%)}
+.sun{position:absolute;width:60vmax;height:60vmax;left:60%;top:-30vmax;border-radius:50%;background:radial-gradient(circle,rgba(255,246,214,.55) 0%,rgba(255,246,214,0) 60%);filter:blur(10px)}
+.cloud{position:absolute;pointer-events:none;will-change:transform}
+.cloud svg{width:100%;height:auto;overflow:visible}
+.c1{width:58vw;left:-8vw;top:34vh;animation:drift 120s linear infinite}
+.c2{width:44vw;left:54vw;top:8vh;opacity:.9;animation:drift 160s linear infinite reverse}
+.c3{width:70vw;left:18vw;top:66vh;opacity:.7;animation:drift 200s linear infinite}
+@keyframes drift{from{transform:translateX(-6vw)}to{transform:translateX(6vw)}}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+.wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;padding:14px 0}
+.bar-in{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-radius:999px;
+  background:var(--dark-glass);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#fff}
+.bar a{text-decoration:none}
+.home{font-weight:900;letter-spacing:-.02em;font-size:15px;display:flex;align-items:center;gap:8px}
+.home i{font-style:normal;opacity:.7}
+.switch{display:flex;gap:4px;padding:4px;border-radius:999px;background:rgba(255,255,255,.1)}
+.switch a{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:8px 14px;border-radius:999px;color:rgba(255,255,255,.8)}
+.switch a.on{background:var(--lime);color:var(--ink)}
+.switch a:not(.on):hover{color:#fff;background:rgba(255,255,255,.12)}
+
+/* hero */
+.head{padding:70px 0 50px;text-align:center;color:#fff}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.32em;opacity:.9;margin:0 0 18px}
+h1{margin:0;font-weight:900;letter-spacing:-.055em;line-height:.86;font-size:clamp(46px,9.5vw,150px);filter:drop-shadow(0 10px 30px rgba(20,50,90,.22))}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em}
+.intro{max-width:640px;margin:26px auto 0;font-size:18px;line-height:1.5;font-weight:600;text-shadow:0 1px 2px rgba(15,35,70,.35),0 4px 24px rgba(15,35,70,.45)}
+.intro a{font-weight:800;text-decoration:none;border-bottom:2px solid var(--lime)}
+.svc{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}
+.svc span{font-size:13px;font-weight:700;padding:8px 13px;border-radius:999px;background:var(--dark-glass);border:1px solid rgba(255,255,255,.16)}
+
+/* sections */
+.sec{background:var(--paper);border-radius:28px;padding:clamp(22px,3.6vw,48px);margin:0 0 26px;box-shadow:0 40px 80px -40px rgba(10,30,60,.45)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:24px}
+.ch{font-size:12px;font-weight:800;letter-spacing:.2em;color:var(--ink-3)}
+.sec h2{margin:8px 0 0;font-size:clamp(30px,4.4vw,56px);line-height:.92;font-weight:900;letter-spacing:-.05em}
+.sec h2 em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.015em}
+.sec-head a{font-size:14px;font-weight:800;text-decoration:none;white-space:nowrap}
+
+/* featured */
+.feat{display:grid;gap:26px}
+.feat-item{display:grid;grid-template-columns:1.55fr 1fr;gap:26px;align-items:center}
+.feat-item:nth-child(even){grid-template-columns:1fr 1.55fr}
+.feat-item:nth-child(even) .yt{order:2}
+.feat-copy small{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--ink-3);text-transform:uppercase}
+.feat-copy h3{margin:10px 0 12px;font-size:clamp(24px,2.6vw,34px);line-height:1.02;font-weight:900;letter-spacing:-.04em}
+.feat-copy p{margin:0 0 14px;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:var(--paper-2);color:var(--ink-2)}
+.pill.lime{background:var(--lime);color:var(--ink)}
+
+/* youtube tiles */
+.yt{position:relative;border-radius:16px;overflow:hidden;background:#141b24 center/cover no-repeat;cursor:pointer;isolation:isolate}
+.yt::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55) 100%);z-index:1;transition:opacity .3s}
+.yt .play{position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;z-index:2;transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.yt .play::after{content:"";margin-left:4px;border-left:16px solid var(--ink);border-top:10px solid transparent;border-bottom:10px solid transparent}
+.yt:hover .play{transform:scale(1.1);background:var(--lime)}
+.yt .lbl{position:absolute;left:12px;right:12px;bottom:10px;z-index:2;color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.yt .lbl b{font-size:14px;font-weight:800;line-height:1.2}
+.yt .lbl span{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);white-space:nowrap}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+.yt.on::before,.yt.on .play,.yt.on .lbl{display:none}
+.r169{aspect-ratio:16/9} .r916{aspect-ratio:9/16}
+
+.grid{display:flex;flex-direction:column;gap:12px}
+.row{display:flex;gap:12px}
+.row .yt,.row .still{min-width:0}
+.still{position:relative;border-radius:16px;overflow:hidden;background:var(--paper-2);cursor:zoom-in}
+.still img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.still:hover img{transform:scale(1.04)}
+.still .lbl{position:absolute;left:10px;right:10px;bottom:10px;color:#fff;font-size:12px;font-weight:800;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+
+.note{margin:20px 0 0;font-size:13px;color:var(--ink-3)}
+
+/* cross link */
+.cross{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:40px 0 0}
+.cross a{display:flex;flex-direction:column;justify-content:space-between;gap:30px;min-height:170px;padding:26px;border-radius:24px;text-decoration:none;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.cross a:hover{transform:translateY(-4px)}
+.cross small{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+.cross b{display:block;font-size:clamp(26px,3vw,38px);font-weight:900;letter-spacing:-.045em;line-height:1;margin-top:8px}
+.cross b em{font-family:var(--serif);font-style:italic;font-weight:400}
+.cross span{font-size:15px;font-weight:700}
+.x-growth{background:var(--lime);color:var(--ink)}
+.x-mail{background:var(--dark-glass);color:#fff;border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(18px)}
+
+footer{padding:34px 0 40px;color:rgba(255,255,255,.8);font-size:13px;display:flex;justify-content:space-between;gap:10px}
+footer a{text-decoration:none;font-weight:700;color:#fff}
+
+.lb{position:fixed;inset:0;z-index:50;background:rgba(8,14,22,.88);display:none;place-items:center;padding:30px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-height:90vh;border-radius:14px}
+
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:860px){
+  .feat-item,.feat-item:nth-child(even){grid-template-columns:1fr}
+  .feat-item:nth-child(even) .yt{order:0}
+  .cross{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .home i{display:none}
+  .switch a{padding:8px 10px;font-size:11px;letter-spacing:.08em}
+  .row{flex-wrap:wrap}
+  .row > .r169{flex:1 1 100% !important}
+  .row > .r916,.row > .still{flex:1 1 calc(50% - 6px) !important}
+  .sec-head{flex-direction:column;align-items:flex-start}
+  footer{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="sky" aria-hidden="true">
+  <div class="sun"></div>
+  <div class="cloud c2"><svg viewBox="0 0 600 260"><defs><filter id="f2" x="-30%" y="-30%" width="160%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="4" seed="7"/><feDisplacementMap in="SourceGraphic" scale="70"/><feGaussianBlur stdDeviation="6"/></filter></defs><g filter="url(#f2)" fill="#f3f7fb"><ellipse cx="300" cy="160" rx="240" ry="70"/><circle cx="220" cy="120" r="80"/><circle cx="330" cy="95" r="100"/><circle cx="430" cy="135" r="70"/></g></svg></div>
+  <div class="cloud c1"><svg viewBox="0 0 800 300"><defs><filter id="f1" x="-30%" y="-30%" width="160%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="4" seed="3"/><feDisplacementMap in="SourceGraphic" scale="90"/><feGaussianBlur stdDeviation="8"/></filter></defs><g filter="url(#f1)" fill="#eef3f8"><ellipse cx="400" cy="200" rx="330" ry="80"/><circle cx="260" cy="150" r="100"/><circle cx="400" cy="110" r="130"/><circle cx="540" cy="160" r="95"/><circle cx="640" cy="190" r="60"/></g></svg></div>
+  <div class="cloud c3"><svg viewBox="0 0 1000 320"><defs><filter id="f3" x="-30%" y="-30%" width="160%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".008" numOctaves="4" seed="21"/><feDisplacementMap in="SourceGraphic" scale="110"/><feGaussianBlur stdDeviation="10"/></filter></defs><g filter="url(#f3)" fill="#f7fafc"><ellipse cx="500" cy="230" rx="450" ry="80"/><circle cx="300" cy="180" r="110"/><circle cx="480" cy="140" r="140"/><circle cx="680" cy="180" r="120"/></g></svg></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="wrap">
+  <div class="bar">
+    <div class="bar-in">
+      <a class="home" href="./">← Daniyar Saidaliev <i>· Founder, KADR.AI</i></a>
+      <nav class="switch" aria-label="Portfolio sections">
+        <a href="./">Growth</a><a class="on" href="work.html">Content</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="head">
+    <p class="kicker">KADR.AI · CONTENT WORK</p>
+    <h1>No crew. <em>Still</em><br>the whole film.</h1>
+    <p class="intro">Commercials, short films, UGC and product visuals, made end to end with generative models — concept, script, shotlist, generation, sound, edit. One person instead of a crew and a studio day. This is the work behind <a href="https://kadrstudio.netlify.app/" target="_blank" rel="noopener">KADR.AI</a>, my studio in Dubai.</p>
+    <div class="svc"><span>Product film</span><span>Hypermotion</span><span>UGC ads</span><span>Commercials</span><span>AI short film</span></div>
+  </header>
+
+  <!-- FEATURED -->
+  <section class="sec rv" aria-label="Featured work">
+    <div class="sec-head">
+      <div><div class="ch">01 · FEATURED</div><h2>Three pieces <em>I'd show first</em></h2></div>
+    </div>
+    <div class="feat">
+      <div class="feat-item">
+        <div class="yt r169" data-yt="4Ee5QPKIBiE"><span class="play"></span><div class="lbl"><b>Love story</b><span>Short film</span></div></div>
+        <div class="feat-copy">
+          <small>Short film</small>
+          <h3>One couple, six eras, one continuous love story.</h3>
+          <p>Six historical worlds with the same cast kept consistent from scene to scene — the hardest part of AI film.</p>
+          <span class="pill lime">Concept · generation · sound · edit</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="yt r169" data-yt="_k0d8XLwJTA"><span class="play"></span><div class="lbl"><b>Stadium-scale action</b><span>Spec ad</span></div></div>
+        <div class="feat-copy">
+          <small>Spec ad · beverage</small>
+          <h3>Stadium-scale action, generated end to end.</h3>
+          <p>A concept ad made on my own initiative to show what one person can produce at brand scale. Not commissioned by the brand.</p>
+          <span class="pill">Spec work · not commissioned</span>
+        </div>
+      </div>
+      <div class="feat-item">
+        <div class="yt r169" data-yt="FRjcUisH8lo"><span class="play"></span><div class="lbl"><b>Winter road film</b><span>Spec ad</span></div></div>
+        <div class="feat-copy">
+          <small>Spec ad · automotive</small>
+          <h3>A winter road film with no location, no crew, no car.</h3>
+          <p>Another self-initiated concept: a full car film without a single physical shoot. Not commissioned by the brand.</p>
+          <span class="pill">Spec work · not commissioned</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL WORK -->
+  <section class="sec rv" aria-label="All work">
+    <div class="sec-head">
+      <div><div class="ch">02 · ALL WORK</div><h2>Films, ads, <em>UGC, motion</em></h2></div>
+      <a href="https://www.instagram.com/flexliketomas/" target="_blank" rel="noopener">More on Instagram ↗</a>
+    </div>
+    <div class="grid">
+      <div class="row">
+        <div class="yt r169" style="flex:1.778" data-yt="f8NMz2V73yM"><span class="play"></span><div class="lbl"><b>Football Origins</b><span>AI film</span></div></div>
+        <div class="yt r169" style="flex:1.778" data-yt="WbZG6bVJegs"><span class="play"></span><div class="lbl"><b>GenHQ ad submission</b><span>Commercial</span></div></div>
+      </div>
+      <div class="row">
+        <div class="yt r916" style="flex:.5625" data-yt="JrQK7rItuig"><span class="play"></span><div class="lbl"><b>UGC</b><span>UGC</span></div></div>
+        <div class="yt r916" style="flex:.5625" data-yt="tHr3s0IIRvk"><span class="play"></span><div class="lbl"><b>Product</b><span>Hypermotion</span></div></div>
+        <div class="yt r916" style="flex:.5625" data-yt="XcQ5wWRA8lA"><span class="play"></span><div class="lbl"><b>Wild card</b><span>Commercial</span></div></div>
+        <div class="yt r916" style="flex:.5625" data-yt="9qtRM-MHiNk"><span class="play"></span><div class="lbl"><b>Product</b><span>Hypermotion</span></div></div>
+      </div>
+      <div class="row">
+        <div class="yt r169" style="flex:1.778" data-yt="g2zoOmPb1-8"><span class="play"></span><div class="lbl"><b>GenHQ ad submission</b><span>Commercial</span></div></div>
+        <div class="yt r169" style="flex:1.778" data-yt="LjzlrBYf1G8"><span class="play"></span><div class="lbl"><b>Vinland</b><span>AI film</span></div></div>
+      </div>
+      <div class="row">
+        <div class="yt r916" style="flex:.5625" data-yt="-p6KinvUoUc"><span class="play"></span><div class="lbl"><b>UGC</b><span>UGC</span></div></div>
+        <div class="yt r916" style="flex:.5625" data-yt="FB_Jbkqpj-0"><span class="play"></span><div class="lbl"><b>Product</b><span>Hypermotion</span></div></div>
+        <div class="still r916" style="flex:.5625"><img src="assets/work/image-02.jpg" alt="Caviar Boutique product still, top-down" loading="lazy"><div class="lbl">Caviar Boutique — top-down still</div></div>
+      </div>
+      <div class="row">
+        <div class="still r916" style="flex:.5625"><img src="assets/work/image-04.jpg" alt="Caviar Boutique product still, river" loading="lazy"><div class="lbl">Caviar Boutique — river still</div></div>
+        <div class="still r916" style="flex:.5625"><img src="assets/work/image-01.jpg" alt="NICE product flat lay" loading="lazy"><div class="lbl">NICE — product flat lay</div></div>
+        <div class="still r916" style="flex:.5625"><img src="assets/work/image-03.jpg" alt="NICE splash triptych" loading="lazy"><div class="lbl">NICE — splash triptych</div></div>
+      </div>
+    </div>
+    <p class="note">Videos play from YouTube. Spec pieces are self-initiated concepts, not commissioned by the brands shown.</p>
+  </section>
+
+  <div class="cross rv">
+    <a class="x-growth" href="./"><div><small>The other side</small><b>Growth, sales <em>&amp; the startups</em></b></div><span>207K subscribers in 28 days, AED 1M in a month, Muras →</span></a>
+    <a class="x-mail" href="mailto:saidalievdaniyar10c@gmail.com"><div><small>Work with me</small><b>Let's <em>talk.</em></b></div><span>saidalievdaniyar10c@gmail.com ↗</span></a>
+  </div>
+
+  <footer>
+    <span>© 2026 Daniyar Saidaliev · Dubai</span>
+    <a href="#">Back to the sky ↑</a>
+  </footer>
+</div>
+
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+// lite YouTube: thumbnail first, iframe on click
+document.querySelectorAll('.yt[data-yt]').forEach(el=>{
+  const id=el.dataset.yt; if(!id){el.remove();return}
+  el.style.backgroundImage=`url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
+  el.setAttribute('role','button'); el.tabIndex=0;
+  el.setAttribute('aria-label','Play '+(el.querySelector('.lbl b')?.textContent||'video'));
+  const play=()=>{ if(el.classList.contains('on'))return; el.classList.add('on');
+    const f=document.createElement('iframe');
+    f.src=`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
+    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen=true; f.title='Video';
+    el.appendChild(f); };
+  el.addEventListener('click',play);
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();play()}});
+});
+// stills lightbox
+const lb=document.getElementById('lb');
+document.querySelectorAll('.still img').forEach(img=>img.addEventListener('click',()=>{lb.querySelector('img').src=img.src;lb.classList.add('on')}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
