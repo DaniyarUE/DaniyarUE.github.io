@@ -165,7 +165,10 @@ figure.ok .empty{display:none}
 .studio-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .studio-links .studio-link{margin-top:0}
 .studio-link.lime-btn{background:var(--lime);color:var(--ink)}
-.nav a.nav-hl{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.nav a.nav-hl{background:var(--lime);color:var(--ink);border-color:var(--lime);font-weight:800;position:relative}
+.nav a.nav-hl::after{content:"";position:absolute;inset:-4px;border-radius:999px;border:2px solid var(--lime);opacity:.0;animation:ping 2.6s ease-out infinite}
+@keyframes ping{0%{opacity:.7;transform:scale(1)}80%,100%{opacity:0;transform:scale(1.18)}}
+.nav a.nav-hl:hover{background:#f0ff8a}
 
 .ventures{color:#fff;margin:0 0 30px}
 .ventures h4{font-size:12px;font-weight:800;letter-spacing:.24em;margin:0 0 14px}
@@ -291,7 +294,9 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
 @media (max-width:700px){
   .hero{padding:18px}
   .frame{inset:8px}
-  .nav{display:none}
+  .nav{padding-top:0}
+  .nav a:not(.nav-hl){display:none}
+  .nav a.nav-hl{position:fixed;top:14px;right:14px;z-index:30;letter-spacing:.08em;box-shadow:0 8px 24px -8px rgba(0,0,0,.35)}
   .lanyard{margin-top:46px}
   .face{grid-template-columns:96px 1fr;min-height:140px}
   .who{padding:24px 14px 12px}
@@ -367,7 +372,7 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
       </div>
     </div>
     <nav class="nav">
-      <a href="#work">Work</a><a href="#how">What I do</a><a href="work.html" class="nav-hl">Content work →</a><a href="#contact">Contact</a>
+      <a href="#work">Work</a><a href="#how">What I do</a><a href="work.html" class="nav-hl">Content portfolio →</a><a href="#contact">Contact</a>
     </nav>
   </div>
 
@@ -487,7 +492,7 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
           <div class="ch">CH 03 · FOUNDER</div>
           <h3><span class="founder-pill">Founder</span> KADR.AI</h3>
           <p class="role">My AI content studio in Dubai. Commercials, UGC, hypermotion and product visuals for brands. I started it, I sell it, I deliver it.</p>
-          <div class="studio-links"><a class="studio-link lime-btn" href="work.html">See the content work →</a><a class="studio-link" href="https://kadrstudio.netlify.app/" target="_blank" rel="noopener">Studio site ↗</a></div>
+          <div class="studio-links"><a class="studio-link lime-btn" href="work.html">Content portfolio →</a><a class="studio-link" href="https://kadrstudio.netlify.app/" target="_blank" rel="noopener">Studio site ↗</a></div>
         </div>
         <div class="when">2026 – Present</div>
       </div>
