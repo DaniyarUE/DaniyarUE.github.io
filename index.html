@@ -162,7 +162,15 @@ h1.big .line:nth-child(2) span{animation-delay:.12s}
   border:2px dashed rgba(13,20,28,.18);border-radius:16px;color:var(--ink-3);font-size:13px;font-weight:600;line-height:1.4}
 .proof .empty code{display:block;margin-top:6px;font-size:11px;color:var(--ink-3);font-weight:500}
 figure.ok .empty{display:none}
-.work-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.founder-pill{display:inline-block;vertical-align:middle;font-family:var(--sans);font-style:normal;font-size:.28em;font-weight:900;letter-spacing:.14em;
+  text-transform:uppercase;padding:.5em .9em;border-radius:999px;background:var(--lime);color:var(--ink);margin:-.3em .25em 0 0;transform:rotate(-4deg)}
+.studio-link{display:inline-flex;margin-top:14px;font-size:14px;font-weight:800;text-decoration:none;padding:11px 16px;border-radius:999px;background:var(--ink);color:#fff;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.studio-link:hover{transform:translateY(-2px)}
+.sub-head{margin:26px 0 -10px;font-size:15px;color:var(--ink-2)}
+.sub-head b{color:var(--ink)}
+
+.work-links{display:grid;grid-template-columns:1fr;gap:12px;margin-top:22px;max-width:360px}
 .wl{display:flex;flex-direction:column;justify-content:space-between;gap:22px;min-height:150px;padding:20px;border-radius:18px;text-decoration:none;
   transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
 .wl:hover{transform:translateY(-4px);box-shadow:0 18px 30px -18px rgba(10,20,40,.5)}
@@ -315,7 +323,7 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
               <div class="slot"></div>
               <div class="status"><span class="dot"></span>AVAILABLE NOW</div>
               <h2>DANIYAR<br>SAIDALIEV</h2>
-              <p>Growth, distribution and sales. Dubai-based operator who builds his own tools.</p>
+              <p>Founder of KADR.AI. Growth, distribution and sales — and I build my own tools.</p>
               <div class="flip-hint"><span>Tap to flip ↻</span><span>ID 280K</span></div>
             </div>
           </div>
@@ -440,12 +448,14 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
     <article class="case rv" id="kadr">
       <div class="case-head">
         <div>
-          <div class="ch">CH 03 · SELL</div>
-          <h3>4 orders, <em>10 days,</em> cold</h3>
-          <p class="role">KADR.AI — my AI content studio. I found the clients myself, then delivered.</p>
+          <div class="ch">CH 03 · FOUNDER</div>
+          <h3><span class="founder-pill">Founder</span> KADR.AI</h3>
+          <p class="role">My AI content studio in Dubai. Commercials, UGC, hypermotion and product visuals for brands. I started it, I sell it, I deliver it.</p>
+          <a class="studio-link" href="https://kadrstudio.netlify.app/" target="_blank" rel="noopener">See the studio ↗</a>
         </div>
         <div class="when">2026 – Present</div>
       </div>
+      <p class="sub-head">First 10 days of selling: <b>4 orders, 3 of them from cold outreach.</b></p>
       <div class="metrics">
         <div class="metric"><small>Orders</small><b>4</b></div>
         <div class="metric"><small>Revenue</small><b>$2,500</b></div>
@@ -459,10 +469,6 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
           <p>The order I'm proudest of: <strong>800 product images in exactly 24 hours</strong>, from brief to delivery, done with one collaborator. A full catalogue rebuilt as studio-grade photography. Those images replaced paid photography on the site and ran in live Meta ads that sold.</p>
           <p class="claim-tag"><span class="tag t-told">In my words: the clients and revenue</span></p>
           <div class="work-links">
-            <a class="wl studio" href="https://kadrstudio.netlify.app/" target="_blank" rel="noopener">
-              <div><small>Studio portfolio</small><b>KADR.AI — commercials, UGC, product visuals</b></div>
-              <div class="wl-row"><span>kadrstudio.netlify.app</span><span class="arrow">↗</span></div>
-            </a>
             <a class="wl film" href="https://www.instagram.com/p/Da76n61MsOH/" target="_blank" rel="noopener">
               <div><small>AI short film · Instagram</small><b>A football story, made with AI</b></div>
               <div class="wl-row"><span>500K views in the first 4 days</span><span class="play">▶</span></div>
