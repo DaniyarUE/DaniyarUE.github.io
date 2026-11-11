@@ -124,6 +124,12 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
 
 .rv{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.8,.2,1),transform 1s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
+/* cursor: paper plane, cloud puff on click (fine pointers only) */
+@media (pointer:fine){
+  html,body,a,button,[role=button],.yt,.still,.badge,.v-card,.wl,.studio-link,.live,label{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'><g transform='rotate(-8 17 17)'><path d='M3 4 L31 15 L17 18 L13 31 Z' fill='%23e5ff58' stroke='%230d141c' stroke-width='2' stroke-linejoin='round'/><path d='M17 18 L31 15' stroke='%230d141c' stroke-width='1.5'/><path d='M17 18 L13 31 L15 20 Z' fill='%23c6dd3a' stroke='%230d141c' stroke-width='1.5' stroke-linejoin='round'/></g></svg>") 3 4,auto}
+  html.puff,html.puff *{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='38' height='30' viewBox='0 0 38 30'><path d='M10 25 C4 25 2 20 4.5 16.5 C3.5 11 9 8 13 10 C14.5 4.5 23 3.5 25.5 9 C30 7.5 35 11 33.5 16 C37 18 35.5 25 30 25 Z' fill='%23ffffff' stroke='%230d141c' stroke-width='2' stroke-linejoin='round'/><circle cx='14' cy='17' r='1.6' fill='%230d141c'/><circle cx='23' cy='17' r='1.6' fill='%230d141c'/><path d='M16.5 20.5 Q18.5 22.5 20.5 20.5' stroke='%230d141c' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>") 19 15,auto!important}
+}
+
 
 @media (max-width:860px){
   .feat-item,.feat-item:nth-child(even){grid-template-columns:1fr}
@@ -241,7 +247,7 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
   </section>
 
   <div class="cross rv">
-    <a class="x-growth" href="./"><div><small>The other side</small><b>Growth, sales <em>&amp; the startups</em></b></div><span>207K subscribers in 28 days, AED 1M in a month, Muras →</span></a>
+    <a class="x-growth" href="./"><div><small>The other side</small><b>Growth, sales <em>&amp; the startups</em></b></div><span>A 280K-subscriber channel, AED 1M in a month, Muras →</span></a>
     <a class="x-mail" href="mailto:saidalievdaniyar10c@gmail.com"><div><small>Work with me</small><b>Let's <em>talk.</em></b></div><span>saidalievdaniyar10c@gmail.com ↗</span></a>
   </div>
 
@@ -254,10 +260,13 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
 <div class="lb" id="lb"><img alt=""></div>
 
 <script>
+
+// cloud puff cursor on click
+addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;document.documentElement.classList.add('puff');clearTimeout(window.__pf);window.__pf=setTimeout(()=>document.documentElement.classList.remove('puff'),220)});
 // lite YouTube: thumbnail first, iframe on click
 document.querySelectorAll('.yt[data-yt]').forEach(el=>{
   const id=el.dataset.yt; if(!id){el.remove();return}
-  el.style.backgroundImage=`url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
+  (function pick(list){const u=`https://i.ytimg.com/vi/${id}/${list[0]}.jpg`,im=new Image();im.onload=()=>{if(im.naturalWidth<=120&&list.length>1)return pick(list.slice(1));el.style.backgroundImage=`url(${u})`};im.onerror=()=>{if(list.length>1)pick(list.slice(1))};im.src=u})(['maxresdefault','sddefault','hqdefault']);
   el.setAttribute('role','button'); el.tabIndex=0;
   el.setAttribute('aria-label','Play '+(el.querySelector('.lbl b')?.textContent||'video'));
   const play=()=>{ if(el.classList.contains('on'))return; el.classList.add('on');
