@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daniyar Saidaliev — Growth, Distribution, Sales</title>
+<title>Daniyar Saidaliev — Founder, AI Builder, Growth</title>
 <meta name="description" content="I get things seen and sold. Zero to 207K subscribers in 28 days. AED 1M in personal sales in a month. An AI sales agent shipped in 2 days.">
 <meta name="theme-color" content="#4a7cc2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sky-top:#2f63ad; --sky-mid:#6f9ad3; --sky-low:#b9d0e8; --haze:#e7eef4;
+  --sky-top:#2f63ad; --sky-mid:#5f8ecb; --sky-low:#7ea3d4; --haze:#93b4dd;
   --ink:#0d141c; --ink-2:#3b4652; --ink-3:#6b7581;
   --paper:#f5f3ec; --paper-2:#ebe8de; --line:rgba(13,20,28,.12);
   --lime:#e5ff58; --sun:#ffd447;
@@ -162,6 +162,26 @@ h1.big .line:nth-child(2) span{animation-delay:.12s}
   border:2px dashed rgba(13,20,28,.18);border-radius:16px;color:var(--ink-3);font-size:13px;font-weight:600;line-height:1.4}
 .proof .empty code{display:block;margin-top:6px;font-size:11px;color:var(--ink-3);font-weight:500}
 figure.ok .empty{display:none}
+.ventures{color:#fff;margin:0 0 30px}
+.ventures h4{font-size:12px;font-weight:800;letter-spacing:.24em;margin:0 0 14px}
+.v-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.v-card{position:relative;display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:var(--radius);text-decoration:none;color:#fff;
+  background:rgba(22,32,46,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s}
+.v-card:hover{transform:translateY(-4px);background:rgba(22,32,46,.75)}
+.v-card b{font-size:28px;font-weight:900;letter-spacing:-.04em;line-height:1}
+.v-card p{margin:0;font-size:14px;line-height:1.45;opacity:.9}
+.v-card small{margin-top:auto;padding-top:8px;font-size:12px;font-weight:700;opacity:.65}
+.v-status{align-self:flex-start;font-size:10.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
+.v-status.run{background:var(--lime);color:var(--ink)}
+.v-status.sold{background:#fff;color:var(--ink)}
+.v-status.shut{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.how-card .sk{display:inline-block;font-size:12px;font-weight:900;padding:3px 8px;border-radius:6px;background:var(--lime);color:var(--ink);margin-bottom:14px}
+@media (max-width:1100px){.skill-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:960px){.v-grid{grid-template-columns:1fr}}
+@media (max-width:700px){.skill-grid{grid-template-columns:1fr}}
+
 .founder-pill{display:inline-block;vertical-align:middle;font-family:var(--sans);font-style:normal;font-size:.28em;font-weight:900;letter-spacing:.14em;
   text-transform:uppercase;padding:.5em .9em;border-radius:999px;background:var(--lime);color:var(--ink);margin:-.3em .25em 0 0;transform:rotate(-4deg)}
 .studio-link{display:inline-flex;margin-top:14px;font-size:14px;font-weight:800;text-decoration:none;padding:11px 16px;border-radius:999px;background:var(--ink);color:#fff;
@@ -244,8 +264,8 @@ figure.ok .empty{display:none}
 .btn:hover{transform:translateY(-3px)}
 .btn.lime{background:var(--lime);color:var(--ink)} .btn.paper{background:var(--paper);color:var(--ink)}
 .btn.glass{background:var(--glass);color:#fff;border:1px solid var(--glass-line);backdrop-filter:blur(10px)}
-footer{padding:30px 0 40px;color:rgba(13,20,28,.6);font-size:13px;display:flex;justify-content:space-between;gap:10px}
-footer a{text-decoration:none;font-weight:700;color:var(--ink)}
+footer{padding:30px 0 40px;color:rgba(255,255,255,.75);font-size:13px;display:flex;justify-content:space-between;gap:10px}
+footer a{text-decoration:none;font-weight:700;color:#fff}
 
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:50;background:rgba(8,14,22,.86);display:none;place-items:center;padding:30px;cursor:zoom-out}
@@ -323,7 +343,7 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
               <div class="slot"></div>
               <div class="status"><span class="dot"></span>AVAILABLE NOW</div>
               <h2>DANIYAR<br>SAIDALIEV</h2>
-              <p>Founder of KADR.AI. Growth, distribution and sales — and I build my own tools.</p>
+              <p>Founder &amp; AI builder. I start things, build them with AI, then find the distribution and sell them.</p>
               <div class="flip-hint"><span>Tap to flip ↻</span><span>ID 280K</span></div>
             </div>
           </div>
@@ -333,6 +353,7 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
               <dt>Based</dt><dd>Dubai, UAE · from Osh, Kyrgyzstan</dd>
               <dt>Speaks</dt><dd>Russian, Kyrgyz, Uzbek, English (C1)</dd>
               <dt>Studies</dt><dd>BSc Digital Business &amp; Data Science, UE Dubai</dd>
+              <dt>Started</dt><dd>KADR.AI · Muras · a 280K YouTube channel</dd>
               <dt>Mode</dt><dd>Execution over strategy. Ships in days, not quarters.</dd>
             </dl>
             <div class="flip-hint"><span>Tap to flip back ↻</span><span></span></div>
@@ -341,17 +362,17 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
       </div>
     </div>
     <nav class="nav">
-      <a href="#work">Work</a><a href="#how">How I work</a><a href="#contact">Contact</a>
+      <a href="#work">Work</a><a href="#how">What I do</a><a href="#contact">Contact</a>
     </nav>
   </div>
 
   <div class="hero-mid">
-    <p class="kicker">GROWTH · DISTRIBUTION · SALES</p>
+    <p class="kicker">FOUNDER · AI BUILDER · GROWTH</p>
     <h1 class="big"><span class="line"><span>DISTRIBUTION</span></span><span class="line"><span>IS THE <em>product.</em></span></span></h1>
   </div>
 
   <div class="hero-bottom">
-    <p class="lede">Zero to 207,000 subscribers in 28 days. AED 1M (≈ $272K) in personal sales in a month. An AI sales agent shipped in 2 days.</p>
+    <p class="lede">Three things started in 2026: a channel grown to 280K and sold, an AI sales agent sold to 3 companies, an AI content studio. Before that, AED 1M (≈ $272K) in sales in a month.</p>
     <nav class="dock" aria-label="Contact">
       <a class="i-mail" href="mailto:saidalievdaniyar10c@gmail.com"><span>Email</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></a>
       <a class="i-tg" href="https://t.me/ppresentt" target="_blank" rel="noopener"><span>Telegram</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 4.2 2.9 11.3c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.8-1.4-1.4ZM8.9 14l9-5.7c.4-.3.8-.1.5.2l-7.7 7-.3 3.2L8.9 14Z"/></svg></a>
@@ -378,6 +399,16 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
       <span class="tag t-proof">Receipt</span><span>screenshot or photo</span>
       <span class="tag t-told">In my words</span><span>no public record — ask me</span>
     </div>
+
+
+    <section class="ventures rv" aria-label="Things I started">
+      <h4>THINGS I STARTED</h4>
+      <div class="v-grid">
+        <a class="v-card" href="#kadr"><span class="v-status run">Running</span><b>KADR.AI</b><p>AI content studio. Commercials, UGC, product visuals for brands.</p><small>Founder · 2026 – now</small></a>
+        <a class="v-card" href="#muras"><span class="v-status shut">Shut down</span><b>Muras</b><p>AI sales agent on top of a company's CRM. Built in 2 days, sold to 3 companies.</p><small>Founder · solo · 2026</small></a>
+        <a class="v-card" href="#youtube"><span class="v-status sold">Sold</span><b>AI YouTube channel</b><p>Fully AI-generated. 0 → 207K in 28 days, 280K when sold.</p><small>Creator · solo · 2026</small></a>
+      </div>
+    </section>
 
     <!-- CH 01 YOUTUBE -->
     <article class="case rv" id="youtube">
@@ -527,14 +558,15 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
 
     <!-- HOW I WORK -->
     <section class="how rv" id="how">
-      <h4>HOW I WORK</h4>
-      <div class="how-grid">
-        <div class="how-card"><b>Execution over strategy.</b><p>I'd rather run ten small tests this week than write one plan for next month. Most of my results came from killing what didn't work, fast.</p></div>
-        <div class="how-card"><b>I build my own tools.</b><p>Not a trained engineer. I vibe-code with LLMs every day and ship working things: agents, scrapers, automations, this site.</p></div>
-        <div class="how-card"><b>I sell in person, too.</b><p>Distribution isn't only content. I've closed deals at a chef's counter and at an exhibition stand. I know what it takes to get a yes.</p></div>
+      <h4>WHAT I DO</h4>
+      <div class="skill-grid">
+        <div class="how-card"><span class="sk">01</span><b>Build with AI.</b><p>Not a trained engineer — I ship anyway. AI agents on top of CRMs, LLM workflows, MCP servers, scrapers and automations, Supabase backends, this site. Daily Claude Code user.</p></div>
+        <div class="how-card"><span class="sk">02</span><b>Start and run things.</b><p>Founded KADR.AI and Muras, launched and sold a channel. Pricing, clients, delivery, suppliers, a 15-person team. And the call to shut something down when it won't scale.</p></div>
+        <div class="how-card"><span class="sk">03</span><b>Find distribution.</b><p>Viral angles and hook testing against retention data, creator and partner outreach, cold outreach, Meta ads. I read the numbers daily and kill what doesn't work.</p></div>
+        <div class="how-card"><span class="sk">04</span><b>Sell.</b><p>B2B and B2C, field sales, tastings, exhibitions, negotiation, key accounts. Distribution isn't only content — I know what it takes to get a yes.</p></div>
       </div>
       <div class="tools">
-        <span>Claude &amp; Claude Code</span><span>ChatGPT</span><span>Gemini</span><span>Supabase</span><span>MCP servers</span><span>Scraping &amp; automation</span><span>Python</span><span>JavaScript</span><span>Meta Ads</span><span>Higgsfield</span><span>Kling</span><span>Seedance</span><span>Veo</span><span>Midjourney</span><span>ElevenLabs</span>
+        <span>Claude &amp; Claude Code</span><span>ChatGPT</span><span>Gemini</span><span>LLM agents</span><span>MCP servers</span><span>Supabase</span><span>Scraping &amp; automation</span><span>Python</span><span>JavaScript</span><span>Telegram bots</span><span>Meta Ads</span><span>Higgsfield</span><span>Kling</span><span>Seedance</span><span>Veo</span><span>Midjourney</span><span>ElevenLabs</span>
       </div>
     </section>
 
@@ -542,7 +574,7 @@ footer a{text-decoration:none;font-weight:700;color:var(--ink)}
     <section class="contact rv" id="contact">
       <h4>NEXT STEP</h4>
       <h2>Let's <em>talk.</em></h2>
-      <p>Open to growth roles where the job is to find channels, close deals and ship fast. Ready to relocate to Almaty.</p>
+      <p>Open to roles and projects where I can build with AI, find the channel and sell. Ready to relocate to Almaty.</p>
       <div class="cta-row">
         <a class="btn lime" href="mailto:saidalievdaniyar10c@gmail.com">saidalievdaniyar10c@gmail.com ↗</a>
         <a class="btn glass" href="https://t.me/ppresentt" target="_blank" rel="noopener">Telegram @ppresentt ↗</a>
