@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creator Growth — Daniyar Saidaliev</title>
+<meta name="description" content="How I'd fill Higgsfield's creator pipeline in the first 30 days: where the real bottleneck is, five segments, the offer per segment, and the outreach.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#4a7cc2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky-top:#2f63ad; --sky-mid:#5f8ecb; --sky-low:#7ea3d4; --haze:#93b4dd;
+  --ink:#0d141c; --ink-2:#3b4652; --ink-3:#6b7581;
+  --paper:#f5f3ec; --paper-2:#ebe8de; --line:rgba(13,20,28,.12);
+  --lime:#e5ff58; --dark-glass:rgba(22,32,46,.62);
+  --sans:"Inter",system-ui,sans-serif; --serif:"Instrument Serif",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--sky-mid);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+::selection{background:var(--lime);color:var(--ink)}
+.sky{position:fixed;inset:0;z-index:-2;overflow:hidden;background:linear-gradient(180deg,var(--sky-top) 0%,var(--sky-mid) 42%,var(--sky-low) 72%,var(--haze) 100%)}
+.sun{position:absolute;width:60vmax;height:60vmax;left:60%;top:-30vmax;border-radius:50%;background:radial-gradient(circle,rgba(255,246,214,.55),rgba(255,246,214,0) 60%);filter:blur(10px)}
+.cloud{position:absolute;pointer-events:none}
+.cloud svg{width:100%;height:auto;overflow:visible}
+.c1{width:58vw;left:-8vw;top:30vh;animation:drift 120s linear infinite}
+.c2{width:44vw;left:54vw;top:8vh;opacity:.9;animation:drift 160s linear infinite reverse}
+@keyframes drift{from{transform:translateX(-6vw)}to{transform:translateX(6vw)}}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+@media (pointer:fine){
+  html,body,a{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'><g transform='rotate(-8 17 17)'><path d='M3 4 L31 15 L17 18 L13 31 Z' fill='%23e5ff58' stroke='%230d141c' stroke-width='2' stroke-linejoin='round'/><path d='M17 18 L31 15' stroke='%230d141c' stroke-width='1.5'/><path d='M17 18 L13 31 L15 20 Z' fill='%23c6dd3a' stroke='%230d141c' stroke-width='1.5' stroke-linejoin='round'/></g></svg>") 3 4,auto}
+  html.puff,html.puff *{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='38' height='30' viewBox='0 0 38 30'><path d='M10 25 C4 25 2 20 4.5 16.5 C3.5 11 9 8 13 10 C14.5 4.5 23 3.5 25.5 9 C30 7.5 35 11 33.5 16 C37 18 35.5 25 30 25 Z' fill='%23ffffff' stroke='%230d141c' stroke-width='2' stroke-linejoin='round'/><circle cx='14' cy='17' r='1.6' fill='%230d141c'/><circle cx='23' cy='17' r='1.6' fill='%230d141c'/><path d='M16.5 20.5 Q18.5 22.5 20.5 20.5' stroke='%230d141c' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>") 19 15,auto!important}
+}
+.wrap{width:min(900px,calc(100% - 32px));margin:0 auto}
+.bar{padding:14px 0}
+.bar a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:800;font-size:14px;
+  background:var(--dark-glass);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(18px);color:#fff}
+.head{padding:50px 0 44px;color:#fff}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.3em;opacity:.9;margin:0 0 16px}
+h1{margin:0;font-weight:900;letter-spacing:-.05em;line-height:.9;font-size:clamp(38px,7vw,88px);filter:drop-shadow(0 10px 30px rgba(20,50,90,.22))}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em}
+.sub{max-width:640px;margin:26px 0 0;font-size:17px;line-height:1.5;font-weight:600;padding:16px 20px;border-radius:18px;
+  color:#fff;background:rgba(14,24,38,.86);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.sec{background:var(--paper);border-radius:26px;padding:clamp(22px,3.4vw,44px);margin:0 0 22px;box-shadow:0 40px 80px -40px rgba(10,30,60,.45)}
+.ch{font-size:12px;font-weight:800;letter-spacing:.2em;color:var(--ink-3)}
+h2{margin:10px 0 18px;font-size:clamp(26px,3.4vw,42px);line-height:.98;font-weight:900;letter-spacing:-.045em}
+h2 em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.015em}
+p{font-size:16px;line-height:1.6;color:var(--ink-2);margin:0 0 14px}
+p strong,li strong{color:var(--ink)}
+.lead{font-size:18px;line-height:1.55}
+.box{border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:18px 0}
+.box.hl{background:var(--lime);border-color:transparent}
+.box.hl p{color:var(--ink)}
+.box p:last-child{margin:0}
+.seg{border-top:1px solid var(--line);padding:20px 0 4px}
+.seg:first-of-type{border-top:0}
+.seg-top{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.num{font-size:12px;font-weight:900;padding:4px 9px;border-radius:7px;background:var(--lime);color:var(--ink)}
+.seg h3{margin:0;font-size:21px;font-weight:900;letter-spacing:-.03em}
+.seg .tag{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.seg p{margin:10px 0 0;font-size:15.5px}
+.offer{display:inline-block;margin-top:10px;font-size:13.5px;font-weight:700;padding:7px 12px;border-radius:9px;background:var(--paper-2);color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14.5px}
+th{text-align:left;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);padding:0 10px 8px 0;border-bottom:1px solid var(--line)}
+td{padding:11px 10px 11px 0;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+td b{color:var(--ink);font-weight:700}
+.msg{background:#eef1f4;border-radius:14px;padding:18px 20px;font-size:15px;line-height:1.55;color:var(--ink);white-space:pre-wrap;margin:14px 0 0}
+ol{margin:0;padding-left:0;list-style:none;counter-reset:w}
+ol li{counter-increment:w;position:relative;padding:16px 0 16px 52px;border-top:1px solid var(--line);font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+ol li:first-child{border-top:0}
+ol li::before{content:"W" counter(w);position:absolute;left:0;top:16px;font-weight:900;font-size:12px;width:36px;height:22px;border-radius:6px;background:var(--ink);color:#fff;display:grid;place-items:center}
+.caveat{font-size:14px;color:var(--ink-3);line-height:1.55;margin:16px 0 0}
+footer{padding:28px 0 44px;color:rgba(255,255,255,.82);font-size:13.5px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{text-decoration:none;font-weight:700;color:#fff}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (max-width:640px){
+  table,thead,tbody,th,td,tr{display:block}
+  thead{display:none}
+  td{border:0;padding:3px 0}
+  tbody tr{border-bottom:1px solid var(--line);padding:12px 0;display:block}
+  td[data-l]::before{content:attr(data-l) " — ";font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true">
+  <div class="sun"></div>
+  <div class="cloud c2"><svg viewBox="0 0 600 260"><defs><filter id="f2" x="-30%" y="-30%" width="160%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="4" seed="7"/><feDisplacementMap in="SourceGraphic" scale="70"/><feGaussianBlur stdDeviation="6"/></filter></defs><g filter="url(#f2)" fill="#f3f7fb"><ellipse cx="300" cy="160" rx="240" ry="70"/><circle cx="220" cy="120" r="80"/><circle cx="330" cy="95" r="100"/><circle cx="430" cy="135" r="70"/></g></svg></div>
+  <div class="cloud c1"><svg viewBox="0 0 800 300"><defs><filter id="f1" x="-30%" y="-30%" width="160%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="4" seed="3"/><feDisplacementMap in="SourceGraphic" scale="90"/><feGaussianBlur stdDeviation="8"/></filter></defs><g filter="url(#f1)" fill="#eef3f8"><ellipse cx="400" cy="200" rx="330" ry="80"/><circle cx="260" cy="150" r="100"/><circle cx="400" cy="110" r="130"/><circle cx="540" cy="160" r="95"/><circle cx="640" cy="190" r="60"/></g></svg></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="wrap">
+  <div class="bar"><a href="./">← Daniyar Saidaliev · Founder, KADR.AI</a></div>
+
+  <header class="head">
+    <p class="kicker">UNSOLICITED · FOR THE HIGGSFIELD GROWTH ROLE</p>
+    <h1>How I'd fill the creator pipeline <em>in 30 days.</em></h1>
+    <p class="sub">I'm applying for the Growth Manager role in Almaty. Rather than describe how I'd work, here's the first week of it. Written from the outside, so some of it will be wrong — tell me which part and I'll redo it.</p>
+  </header>
+
+  <section class="sec rv">
+    <div class="ch">01 · WHAT I FOUND</div>
+    <h2>The acquisition machine <em>already exists.</em></h2>
+    <p class="lead">Before writing a plan I went looking for what's already running. Three things are live: the <strong>Creator Partnership Program</strong> (a full plan, monthly credits, early model access, a partner community, no follower minimum, every application reviewed by a person), <strong>Higgsfield Earn</strong> (self-serve: connect Instagram, YouTube or X, accept a campaign, get paid per approved video with bonuses at view milestones), and <strong>B2B / studio partnerships</strong>.</p>
+    <p>So the job isn't to build creator acquisition. It's to feed a machine that's already built.</p>
+    <div class="box hl">
+      <p><strong>That changes where the work is.</strong> In every program shaped like this, the number that hurts isn't signups — it's the gap between <em>accepted</em> and <em>shipped a second video</em>. People join, get the credits, post one test, and go quiet. If the KPI is unique videos per month, the leverage is in first-video friction and in giving people a reason to come back, not in collecting more applications.</p>
+    </div>
+    <p>I'd want to see the real funnel before committing to that: applications → accepted → first video shipped → second video. If the drop is at acceptance, my read is wrong and the work is recruiting. If it's after acceptance, the work is activation. I'd ask for those four numbers on day one.</p>
+  </section>
+
+  <section class="sec rv">
+    <div class="ch">02 · WHERE I'D LOOK</div>
+    <h2>Five segments, <em>five different offers</em></h2>
+    <p>Creators aren't one audience. Paying a festival filmmaker per video insults them; offering an exposure deal to someone posting daily shorts wastes their time. Same product, five different trades.</p>
+
+    <div class="seg">
+      <div class="seg-top"><span class="num">01</span><h3>AI filmmakers with a festival record</h3><span class="tag">Low volume · high credibility</span></div>
+      <p>People putting finished films into Reply AI Film Festival, the AI Movie Awards and similar. They produce few pieces, but each one is a reference the rest of the field reshares. They care about legitimacy and distribution, not a few hundred dollars.</p>
+      <span class="offer">Offer: CPP — credits, early model access, festival support, featured placement</span>
+    </div>
+
+    <div class="seg">
+      <div class="seg-top"><span class="num">02</span><h3>Tool reviewers and tutorial channels</h3><span class="tag">Highest volume per creator</span></div>
+      <p>Their whole format is "a new model dropped, here's what it does." Every release is a free content hook for them, which means they publish repeatedly without being chased. Their audience is also the buying audience. The currency they want is being first.</p>
+      <span class="offer">Offer: embargoed early access to unreleased models, same-day drop</span>
+    </div>
+
+    <div class="seg">
+      <div class="seg-top"><span class="num">03</span><h3>Short-form AI creators on Instagram and TikTok</h3><span class="tag">Volume play</span></div>
+      <p>They post daily and they're already paid by the piece elsewhere, so the per-video economics of Earn fit them with no negotiation. The bottleneck here is never willingness — it's whether the first video takes them twenty minutes or two hours.</p>
+      <span class="offer">Offer: Earn, plus a brief with three ready hooks to kill the blank-page problem</span>
+    </div>
+
+    <div class="seg">
+      <div class="seg-top"><span class="num">04</span><h3>Motion designers and VFX people moving into AI</h3><span class="tag">Converts the sceptics</span></div>
+      <p>The audience that still thinks AI video looks cheap doesn't listen to AI creators — it listens to people with craft credentials. One of these doing a serious breakdown is worth more than ten generic promos to that audience.</p>
+      <span class="offer">Offer: CPP plus a co-produced breakdown, their craft framing, not ours</span>
+    </div>
+
+    <div class="seg">
+      <div class="seg-top"><span class="num">05</span><h3>Small brands and agency owners making their own ads</h3><span class="tag">The one nobody is chasing</span></div>
+      <p>This is the segment I'd push hardest, because I was in it. I run an AI content studio in Dubai and I've sold this exact thing to brands: a full product catalogue rebuilt in 24 hours, videos that then ran as live Meta ads. These people publish constantly, tag the tools they use, and nobody is recruiting them because they don't look like influencers. I already have the network and I know the pitch, because it's the one I used on myself.</p>
+      <span class="offer">Offer: business plan plus a co-signed case study with real numbers</span>
+    </div>
+  </section>
+
+  <section class="sec rv">
+    <div class="ch">03 · THE LIST</div>
+    <h2>Named targets, <em>segment one</em></h2>
+    <p>Below is the format I'd run the whole list in — a working sheet, not a spreadsheet of follower counts. Who, why them, what we offer, what we ask for. Segment one is filled in from this year's AI film festival results as a worked example; the full list runs to roughly 40 names across all five segments.</p>
+    <table>
+      <thead><tr><th>Creator</th><th>Why them</th><th>Offer</th><th>Ask</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Creator"><b>Robert Gaudette</b></td><td data-l="Why">1st place, Reply AI Film Festival 2026</td><td data-l="Offer">CPP + early access</td><td data-l="Ask">Next film made on Higgsfield, credited</td></tr>
+        <tr><td data-l="Creator"><b>Jiaze Li</b></td><td data-l="Why">AI Studios Grand Prix and Community Award, same festival — the only double winner</td><td data-l="Offer">CPP + festival support</td><td data-l="Ask">One film + a process breakdown</td></tr>
+        <tr><td data-l="Creator"><b>2xLabs</b></td><td data-l="Why">3rd place and the AI for Good Award; a studio, so output is repeatable</td><td data-l="Offer">Studio partnership, not a creator deal</td><td data-l="Ask">Ongoing output, team seats</td></tr>
+        <tr><td data-l="Creator"><b>Alex Naghavi &amp; Ezra Li</b></td><td data-l="Why">2nd place; a working pair, which usually means faster turnaround</td><td data-l="Offer">CPP, shared credits</td><td data-l="Ask">Two pieces per quarter</td></tr>
+        <tr><td data-l="Creator"><b>Ibai Abad</b></td><td data-l="Why">Special mention for "The Child of the Sea"</td><td data-l="Offer">CPP</td><td data-l="Ask">One film, credited</td></tr>
+      </tbody>
+    </table>
+    <p class="caveat">Sourced from published 2026 festival results. Handles and audience sizes aren't in this table on purpose: I'd rather verify each one by opening the account than paste a number from a listicle. That's an hour of work, not a research project.</p>
+  </section>
+
+  <section class="sec rv">
+    <div class="ch">04 · THE OUTREACH</div>
+    <h2>What I'd actually <em>send</em></h2>
+    <p>Short, specific, no flattery, one ask. The variable is the first line — if I can't write a true specific sentence about someone's work, they shouldn't be on the list.</p>
+    <div class="msg">Hi [name] — [one true, specific line about a piece they made].
+
+I run creator partnerships at Higgsfield. We make AI video models, and the part that's relevant to you: partners get a full plan with monthly credits and early access to models before release.
+
+No posting quota and no approval over what you make. If you use it and it's good, tag us.
+
+Worth 15 minutes?</div>
+    <p class="caveat">Then I'd test it. Four versions of the first line, fifty sends each, measure reply rate, keep what works and kill the rest. Same loop I used to take a YouTube channel to 280,000 subscribers — the hooks were different, the method wasn't.</p>
+  </section>
+
+  <section class="sec rv">
+    <div class="ch">05 · FIRST 30 DAYS</div>
+    <h2>What I'd have to show <em>by day 30</em></h2>
+    <ol>
+      <li><strong>Get the four funnel numbers</strong> — applications, accepted, first video shipped, second video. Build the tracked list: ~200 creators across the five segments, tagged by segment, with a true specific line about each. Nothing sent yet.</li>
+      <li><strong>100 sends, four first-line variants.</strong> Measure reply rate by segment and by variant. By the end of the week I know which segment answers and which message works, and I stop doing the other three.</li>
+      <li><strong>Push the repliers to a shipped video.</strong> This is the real job. Remove every step between yes and posted: a brief, three hooks, the credits already in their account. Target: 20 first videos.</li>
+      <li><strong>Report and double down.</strong> Cost per shipped video by segment, reply rate by variant, how many came back for a second video. Then put the next month's effort into whichever segment produced, not whichever one I liked.</li>
+    </ol>
+    <div class="box">
+      <p>Honest number: I don't know what a realistic target for shipped videos is from the outside, so 20 is my guess, not a promise. Tell me the current baseline and I'll tell you what I think I can move it to.</p>
+    </div>
+  </section>
+
+  <section class="sec rv">
+    <div class="ch">06 · WHY ME</div>
+    <h2>I've been on <em>both sides of this</em></h2>
+    <p>I've been the creator you're trying to recruit — I took a YouTube channel from zero to 280,000 subscribers and sold it, and I've been running an AI content studio on your tools. I know why creators go quiet after the first video, because I've gone quiet after the first video.</p>
+    <p>I've also done the other half: AED 1,000,000 (≈ $272K) in personal sales in one month in luxury B2B, won by driving to venues and presenting in person. Creator partnerships are sales with a different vocabulary — a list, a specific reason, a close, a follow-up.</p>
+    <p>And I ship fast: a working AI sales agent in two days, sold to three companies; a brand's full catalogue — 800 product images — rebuilt in 24 hours.</p>
+    <div class="box hl"><p><strong>I'll be in Almaty.</strong> Dubai is where I live now, not a constraint. The full record, with receipts: <a href="./"><strong>daniyarue.github.io</strong></a></p></div>
+  </section>
+
+  <footer>
+    <span>Daniyar Saidaliev · saidalievdaniyar10c@gmail.com · Telegram @ppresentt</span>
+    <a href="./">Back to the portfolio ↑</a>
+  </footer>
+</div>
+<script>
+addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;document.documentElement.classList.add('puff');clearTimeout(window.__pf);window.__pf=setTimeout(()=>document.documentElement.classList.remove('puff'),220)});
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.06});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
