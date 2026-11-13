@@ -230,6 +230,10 @@ figure.ok .empty{display:none}
 .proof figure.shot img{object-fit:contain;height:auto}
 .proof .cap{grid-column:1/-1;margin:-4px 0 10px;font-size:13.5px;line-height:1.5;color:var(--ink-2)}
 .proof .cap b{color:var(--ink)}
+.examples{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:4px 0 20px}
+.examples>div{border:1px solid var(--line);border-radius:16px;padding:16px 18px;background:var(--paper-2)}
+.case-body .examples p{font-size:14.5px;line-height:1.55;margin:0}
+.case-body .examples p b{color:var(--ink)}
 .live{grid-column:1/-1;justify-self:start;font-size:14px;font-weight:800;text-decoration:none;padding:12px 16px;border-radius:999px;background:var(--ink);color:#fff}
 .live:hover{background:#26313d}
 
@@ -293,7 +297,7 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
 /* ───────── RESPONSIVE ───────── */
 @media (max-width:960px){
   .stats{grid-template-columns:1fr 1fr}
-  .case-body,.small-cases,.how-grid{grid-template-columns:1fr}
+  .case-body,.small-cases,.how-grid,.examples{grid-template-columns:1fr}
   .enter{width:132px;height:132px;font-size:15px}
   .lede{font-size:15px;max-width:300px}
 }
@@ -474,19 +478,17 @@ footer a{text-decoration:none;font-weight:700;color:#fff}
         <div class="metric"><small>Companies sold to</small><b>3</b></div>
         <div class="metric"><small>Built by</small><b>Me, solo</b></div>
       </div>
-      <div class="case-body">
+      <div class="case-body" style="grid-template-columns:1fr">
         <div>
           <p>Sales teams sit on a CRM full of buyers they forget about. At a <strong>luxury food retailer</strong>, a manager types one line into Telegram and the agent pulls from the CRM who to call, why, and what it's worth. <strong>Bigger orders, from customers nobody would have remembered to call.</strong></p>
+          <div class="examples">
+            <div><p><b>"Which regulars in Dubai haven't ordered in a while? Give me a list with ready messages."</b> The agent returned 40 clients with three or more orders and 60+ days of silence, biggest spenders first, a personal message written for each — and a note on what it couldn't verify instead of filling the gap.</p></div>
+            <div><p><b>"Tell this customer when the salmon arrives."</b> It checked the CRM in two number formats, found nothing, offered two options rather than guessing, and logged the task so it wouldn't be dropped.</p></div>
+          </div>
           <p>The CEO got his own version: revenue, profit and who bought what — any hour, without opening the CRM or waiting for the accountant to pick up.</p>
           <p>The first agent was about half the work. The other half was learning each new company's operations. I sold variants to a food retailer, a showroom and an agency.</p>
           <p><strong>Why I shut it down:</strong> every client needed its own deep custom logic, so nothing carried over from one to the next. It was a services business pretending to be a product. I'd rather know that early.</p>
-          <p class="claim-tag"><span class="tag t-told">In my words: the sales and the shutdown</span></p>
-        </div>
-        <div class="proof">
-          <figure class="wide shot" data-slot><img src="assets/muras-chat.jpg" alt="Muras agent in Telegram returning a list of 40 dormant regular clients ranked by spend"><div class="empty">Agent chat</div><figcaption><span class="tag t-proof">Receipt · real chat</span></figcaption></figure>
-          <p class="cap"><b>Ask:</b> "Which regulars in Dubai haven't ordered in a while? Give me a list with ready messages." <b>Agent:</b> a file of 40 clients with 3+ orders and 60+ days of silence, a personal message for each, the biggest spenders on top — and a warning about what it couldn't verify.</p>
-          <figure class="wide shot" data-slot><img src="assets/muras-tasks.jpg" alt="Muras agent checking the CRM for a phone number and logging a task"><div class="empty">Agent task</div><figcaption><span class="tag t-proof">Receipt · real chat</span></figcaption></figure>
-          <p class="cap"><b>Ask:</b> "Tell this customer when the salmon arrives." <b>Agent:</b> checks the CRM in two number formats, finds nothing, offers two options instead of guessing, logs the task. Client names and numbers hidden.</p>
+          <p class="claim-tag"><span class="tag t-told">In my words: the agent, the sales and the shutdown</span></p>
         </div>
       </div>
     </article>
