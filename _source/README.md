@@ -10,6 +10,6 @@
 - No Yadgar.AI (formerly Muras) screenshots on the site: the agent is explained in words only (removed Nov 2026 — the chat screenshots looked unprofessional). If any are ever added back, client names, amounts and phone numbers must be blurred.
 - No images of real public figures (e.g. the Messi film) and no third-party characters/logos (e.g. Spider-Man) on the site.
 - Exception: the Cognition mark in the Night Watch case (`assets/nightwatch/cognition-mark.svg`) credits the hackathon's lead sponsor, whose product Devin is built into Night Watch. Other partners stay as text names.
-- Night Watch: Top 10 of ~50 teams at The CIS Sprint (21 Nov 2026) is Daniyar's word. Built with Saif (Saif-616): Daniyar led and made product calls, code and branding were shared. Demo video is Saif's Drive file, embedded via /preview.
+- Night Watch: Top 10 of ~50 teams at The CIS Sprint (21 Nov 2026) is Daniyar's word. Built with Saif (Saif-616): Daniyar led and made product calls, code and branding were shared. Demo video is on YouTube (https://youtu.be/FVMGALfQdBw), embedded on click via youtube-nocookie.
 - Pepsi / Ferrari pieces are labelled spec work, not commissioned.
 - Job titles in the CV stay as they were; positioning lives in the header line.

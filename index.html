@@ -774,7 +774,7 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 // Night Watch demo video: load the player only on click
 const nwv=document.getElementById('nwvideo');
 if(nwv)nwv.querySelector('.vplay').addEventListener('click',()=>{
-  nwv.innerHTML='<iframe src="https://drive.google.com/file/d/1sAl4rP6C_6SHDZhe5IOSoY08us3v_ap3/preview" allow="autoplay; fullscreen" allowfullscreen title="Night Watch demo"></iframe>';
+  nwv.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/FVMGALfQdBw?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="Night Watch demo"></iframe>';
 });
 // chapter index: highlight the project on screen
 const chapLinks=[...document.querySelectorAll('.chapters a')];
