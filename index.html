@@ -778,12 +778,20 @@ if(nwv)nwv.querySelector('.vplay').addEventListener('click',()=>{
 });
 // chapter index: highlight the project on screen
 const chapLinks=[...document.querySelectorAll('.chapters a')];
-const chapIO=new IntersectionObserver(es=>es.forEach(en=>{
-  if(!en.isIntersecting)return;
-  chapLinks.forEach(a=>{const on=a.getAttribute('href')==='#'+en.target.id;a.classList.toggle('on',on);if(on&&a.scrollIntoView&&innerWidth<700)a.parentElement.scrollTo({left:a.offsetLeft-20,behavior:'smooth'})});
-}),{rootMargin:'-45% 0px -50% 0px'});
-chapLinks.forEach(a=>{const t=document.querySelector(a.getAttribute('href'));if(t)chapIO.observe(t)});
-
+const visible=new Set(); let lockUntil=0;
+const setOn=link=>chapLinks.forEach(a=>{const on=a===link;a.classList.toggle('on',on);if(on&&innerWidth<700)a.parentElement.scrollTo({left:a.offsetLeft-20,behavior:'smooth'})});
+const chapIO=new IntersectionObserver(es=>{
+  es.forEach(en=>en.isIntersecting?visible.add(en.target.id):visible.delete(en.target.id));
+  if(performance.now()<lockUntil)return;
+  // side-by-side cases share a row: the first one in reading order wins
+  const link=chapLinks.find(a=>visible.has(a.getAttribute('href').slice(1)));
+  if(link)setOn(link);
+},{rootMargin:'-45% 0px -50% 0px'});
+chapLinks.forEach(a=>{
+  const t=document.querySelector(a.getAttribute('href'));if(t)chapIO.observe(t);
+  // a click always shows the chapter that was clicked
+  a.addEventListener('click',()=>{setOn(a);lockUntil=performance.now()+1200});
+});
 // clouds follow the cursor a little
 if(!reduce){
   const clouds=[...document.querySelectorAll('.cloud')];
